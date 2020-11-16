@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let n = parseInt(prompt("Nhập số luong so nguyen to cần in: "), 10);
+        let num = 3;
+        let flag = true;
+        //neu n < 2 khong phai so nguyen to
+        if (n >= 1) {
+            //số nhập từ bàn phím mà >1 thì sẽ hiển thị ngay số đầu tiên là 2
+            document.write("Số Nguyên Tố Thú 1 là : 2" + "<br>");
+        }
+        for (let i = 2; i <= n;) {
+            for (let j = 2; j <= Math.sqrt(num); j++) {
+                if (num % j == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag !== false) {
+                document.write("Số Nguyên Tố Thứ " + i + " là :" + num + "<br>");
+                i++;
+            }
+            flag = true;
+            num++;
+        }
+
+
+    </script>
+</body>
+
+</html>
